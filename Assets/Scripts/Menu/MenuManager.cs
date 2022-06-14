@@ -41,15 +41,10 @@ public class MenuManager : MonoBehaviour
         }
         CurrentMainMenu.gameObject.SetActive(true);
     }
-
-    void Update()
+    public void onClickStartGame() 
     {
-        if (Input.GetKeyDown(KeyCode.A)) 
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+        GameManager.instance.loadNextScene();
     }
-
     /*public void goRoot() 
     {
         this.transform.SetParent(null);

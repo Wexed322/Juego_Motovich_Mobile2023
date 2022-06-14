@@ -18,11 +18,6 @@ public class Options : MonoBehaviour
         brillo.value = PlayerPrefs.GetFloat("Brillo");
     }
 
-    void Update()
-    {
-       
-    }
-
     public void closeMenu() 
     {
         menuManager.CurrentMainMenu.gameObject.SetActive(true);
@@ -36,6 +31,6 @@ public class Options : MonoBehaviour
     public void setBrightness()
     {
         PlayerPrefs.SetFloat("Brillo", brillo.value);
-        brilloImage.color = new Color(brilloImage.color.r, brilloImage.color.g, brilloImage.color.b, brillo.value);
+        brilloImage.color = new Color(brilloImage.color.r, brilloImage.color.g, brilloImage.color.b, 1 - brillo.value);
     }
 }
